@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Run Playwright tests
-        run: npx playwright test --browser=chromium
+        run: npx playwright test --project=chromium
 
       - name: Upload test artifacts
         uses: actions/upload-artifact@v2
