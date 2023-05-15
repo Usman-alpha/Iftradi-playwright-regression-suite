@@ -85,6 +85,8 @@ test('Regression test suite.', async ({ page }) => {
     await page.getByRole('link', { name: 'Media' }).click();
 
     await page.locator('#meeting').click();
+    
+    await browser.close();
 
     // await page.pause();
 })
