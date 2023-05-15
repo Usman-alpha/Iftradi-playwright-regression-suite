@@ -32,5 +32,5 @@ test('Login.', async ({ page }) => {
     await page.locator('button:has-text("Log Out")').click();
 
     //Close the browser
-    // await browser.close();
+    await browser.close();
 })
