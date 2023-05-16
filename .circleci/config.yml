@@ -17,6 +17,10 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
+          
+      - run:
+          name: Install Playwright
+          command: npx playwright install
 
       - save_cache:
           paths:
@@ -25,7 +29,7 @@ jobs:
 
       - run:
           name: Run Playwright tests
-          command: npx playwright test --project=chromium
+          command: npx playwright test --project=chromium -t chrome
 
       - store_artifacts:
           path: test-results
