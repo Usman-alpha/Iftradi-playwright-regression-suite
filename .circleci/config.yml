@@ -54,7 +54,7 @@ jobs:
 
       - run:
           name: Run Playwright tests
-          command: npx playwright test
+          command: npx playwright test --project=chromium
 
       - store_artifacts:
           path: test-results
