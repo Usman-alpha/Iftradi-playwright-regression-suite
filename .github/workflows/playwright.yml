@@ -3,10 +3,10 @@ name: Playwright Tests CI
 on:
   push:
     branches:
-      - main  # Update with your branch name or pattern
+      - main
   pull_request:
     branches:
-      - main  # Update with your branch name or pattern
+      - main
   schedule:
     - cron: '0 13 * * *'  # Schedule at 1 PM PKT every day
 
@@ -25,12 +25,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        
+
       - name: Install Playwright
-        run: npx playwright install 
-        
-      - name: Install Playwright Deps
-        run: npx playwright install-deps
+        run: npx playwright install --with-deps
+
+      - name: Create test results directory
+        run: mkdir -p test-results
 
       - name: Run Playwright tests
         run: npx playwright test --project=chromium
