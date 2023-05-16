@@ -30,7 +30,7 @@ jobs:
 
       - run:
           name: Run Playwright tests
-          command: npx playwright test --project=chromium
+          command: npx playwright test
 
       - store_artifacts:
           path: test-results
