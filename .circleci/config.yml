@@ -54,7 +54,7 @@ jobs:
 
       - run:
           name: Run Playwright tests
-          command: npx playwright test ./tests/login.spec.js
+          command: npx playwright test
 
       - store_artifacts:
           path: test-results
