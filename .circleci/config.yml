@@ -29,7 +29,7 @@ jobs:
 
       - run:
           name: Run Playwright tests
-          command: npx playwright test --project=chromium -t chrome
+          command: npx playwright test --project=chromium --grep chrome
 
       - store_artifacts:
           path: test-results
