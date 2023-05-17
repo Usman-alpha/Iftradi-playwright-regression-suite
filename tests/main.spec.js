@@ -86,7 +86,7 @@ test('Regression test suite.', async ({ page }) => {
 
     await page.locator('#meeting').click();
     
-    await browser.close();
+    await page.close();
 
     // await page.pause();
 })
