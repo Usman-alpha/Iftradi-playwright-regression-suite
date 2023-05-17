@@ -21,5 +21,5 @@ test('Login to Application with valid credentials.', async ({page}) => {
         await page.getByRole('button', { name: 'Register' }).click();
 
         //Close the browser
-        await browser.close();
+        await page.close();
 })
